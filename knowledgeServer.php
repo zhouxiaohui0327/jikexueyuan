@@ -8,10 +8,10 @@
 header("Content-type:text/html;charset=utf-8");
 $img_url = $_POST['img_url'];
 $message = $_POST['message'];
-$class = $_POST['class'];
+$classHour = $_POST['classHour'];
 require_once"mysql.php";
 connectDb();
-$sql="INSERT INTO knowledge (img_url,message,class) VALUES('$img_url','$message','$class')";
+$sql="INSERT INTO knowledge (img_url,message,classHour) VALUES('$img_url','$message','$classHour')";
 
 if (!mysql_query($sql))
 {

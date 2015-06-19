@@ -15,7 +15,6 @@ $classHour = $_POST['classHour'];
 $time =date("Y-m-d H:i:s");
 $sql="UPDATE content SET last_time='$time', img_url = '$img_url',message ='$message', classHour = '$classHour' WHERE id=$id";
 
-
 if(mysql_query($sql)){
     $result=array();
     $result['state']=true;

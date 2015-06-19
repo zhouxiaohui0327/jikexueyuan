@@ -15,4 +15,7 @@ function del($tableName,$where){
 }
 $del_combat = del('knowledge',"id='$id'");
 mysql_close();
-header('Location:./knowledge.php');
+
+    header('Location:./knowledge.php');
+
+

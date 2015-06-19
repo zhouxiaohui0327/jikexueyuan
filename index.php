@@ -229,40 +229,6 @@ require_once "include_index.php";
                        <?php endforeach;?>
 
 
-
-<!--                       <div class="imger1">-->
-<!--                           <img src="http://wirrorcdn.jikexueyuan.com/picture/android.png" width="70px" height="70px"/>-->
-<!--                           <h2>Android路径图</h2>-->
-<!--                           <p>迅速掌握核心知识</p>-->
-<!--                           <p>提升自身竞争力</p>-->
-<!--                           <p>成为Android开发高手</p>-->
-<!--                           <button class="button" style="width:140px;height:33px;font-size: 14px">立即学习</button>-->
-<!--                       </div>-->
-<!--                       <div class="imger1">-->
-<!--                           <img src="http://wirrorcdn.jikexueyuan.com/picture/android.png" width="70px" height="70px"/>-->
-<!--                           <h2>Android路径图</h2>-->
-<!--                           <p>迅速掌握核心知识</p>-->
-<!--                           <p>提升自身竞争力</p>-->
-<!--                           <p>成为Android开发高手</p>-->
-<!--                           <button class="button" style="width:140px;height:33px;font-size: 14px">立即学习</button>-->
-<!--                       </div>-->
-<!--                       <div class="imger1">-->
-<!--                           <img src="http://wirrorcdn.jikexueyuan.com/picture/android.png" width="70px" height="70px"/>-->
-<!--                           <h2>Android路径图</h2>-->
-<!--                           <p>迅速掌握核心知识</p>-->
-<!--                           <p>提升自身竞争力</p>-->
-<!--                           <p>成为Android开发高手</p>-->
-<!--                           <button class="button" style="width:140px;height:33px;font-size: 14px">立即学习</button>-->
-<!--                       </div>-->
-<!--                       <div class="imger1">-->
-<!--                           <img src="http://wirrorcdn.jikexueyuan.com/picture/android.png" width="70px" height="70px"/>-->
-<!--                           <h2>Android路径图</h2>-->
-<!--                           <p>迅速掌握核心知识</p>-->
-<!--                           <p>提升自身竞争力</p>-->
-<!--                           <p>成为Android开发高手</p>-->
-<!--                           <button class="button1" style="width:140px;height:33px;font-size: 14px">即将开启</button>-->
-<!--                       </div>-->
-
                    </div>
                    <div  class="bottom_content1">
                        <div class="contenttool">
@@ -275,7 +241,7 @@ require_once "include_index.php";
                         <?php foreach($knowledge_list as $row):?>
                        <div class="foot_img"><img src="<?php echo $row['img_url'];?>"/>
                            <h2><?php echo $row['message'];?></h2>
-                           <p><?php echo $row['class'];?></p>
+                           <p><?php echo $row['classHour'];?></p>
                        </div>
                        <?php endforeach;?>
 

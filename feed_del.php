@@ -15,7 +15,7 @@ function del($tableName,$where){
     return $del;
 }
 $del_content = del('content',"id='$id'");
-if($del_content){
+if($del_content==true){
     $result=array();
     $result['state'] = true;
     $result['data'] = '删除成功';

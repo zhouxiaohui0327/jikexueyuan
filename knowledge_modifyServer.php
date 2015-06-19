@@ -12,16 +12,21 @@ connectDb();
 $id = $_POST['id'];
 $img_url = $_POST['img_url'];
 $message = $_POST['message'];
-$class = $_POST['class'];
+$classHour = $_POST['classHour'];
 
-$sql="UPDATE knowledge SET img_url='$img_url',message='$message' ,class='$class' WHERE id=$id";
+$sql="UPDATE knowledge SET img_url= '$img_url',message= '$message' ,classHour= '$classHour' WHERE id=$id";
 
 
-if (!mysql_query($sql)){
-    die('Error: ' . mysql_error());
+if(mysql_query($sql)){
+    $result=array();
+    $result['state']=true;
+    $result['data']='修改成功';
+    echo json_encode($result);
+    die();
+}else{
+    $result=array();
+    $result['state']=false;
+    $result['data']='修改失败';
+    echo json_encode($result);
+    die();
 }
-echo "修改一条记录";
-
-mysql_close();
-
-header("Location:./knowledge.php");

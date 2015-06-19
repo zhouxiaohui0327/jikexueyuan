@@ -180,7 +180,7 @@ $feed_list=get_list('content');
                        dataType : 'json',
                        success : function(result){
                            if(result.state){
-                               $("#modifyContent").css("display","none");
+                               $("#modifyContent").hide();
 //                               window.location.href="feed.php";
                                $("tr."+id).find("td").eq(2).html(img_url);
                                $("tr."+id).find("td").eq(3).html(message);
