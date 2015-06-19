@@ -1,0 +1,13 @@
+#modifyContent {
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: #35b558;
+    opacity: .9;
+    top: 170px;
+    left: 550px;
+    width: 215px;
+    height: 350px;
+    z-index: 101;
+    border-radius: 30px;
+}

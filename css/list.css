@@ -1,0 +1,246 @@
+.wrapper{
+    width:100%;
+    height: 2020px;
+}
+.width_1000{
+    width:1000px;
+    margin:0 auto;
+    margin-top:25px;
+    height:2020px;
+}
+.wrapper_nav{
+    width:210px;
+    height:808px;
+    float:left;
+}
+.main {
+    width:770px;
+    margin-left:20px;
+    float:left;
+}
+.classify{
+    border: 1px solid #f3f3f3;
+    border-top: 2px solid #35b558;
+    margin-bottom: -1px;
+    font-size:14px;
+    font-weight:400;
+    line-height: 36px;
+    text-indent:15px;
+
+}
+.classify_1{
+    border: 1px solid #f3f3f3;
+    margin-bottom: -1px;
+    padding:14px;
+}
+.classify_1 p{
+    font-size:13px;
+    color:#333;
+    line-height:20px;
+    margin-bottom:2px;
+}
+.classify_1 a{
+    font-size:12px;
+    color:#666;
+    text-decoration: none;
+    line-height: 20px;
+    margin-right:10px;
+}
+.classify_1 a:hover{
+    color:#35b558;
+}
+.courses{
+    height:36px;
+    border:1px solid #f3f3f3;
+}
+.course_box{
+    height:36px;
+    background-color: #f5f5f5;
+}
+.course h3{
+    border-right:1px solid #f3f3f3;
+    padding:0 16px;
+    background-color:white;
+    font-size:12px;
+    line-height: 36px;
+    width:52px;
+}
+.course_nav{
+    float:right;
+}
+.course{
+    box-sizing: content-box;
+    background-color:#f5f5f5;
+    float:left;
+    height:36px;
+    width:358px;
+    display:inline;
+    position: relative;
+}
+.course dl{
+    float:left;
+    height:36px;
+    position:absolute;
+    display:inline-block;
+    line-height:36px;
+    top:0;
+    left:85px;
+    margin:0 1px 0 -1px;
+}
+.course dt{
+    display: inline;
+    height:36px;
+    width:75px;
+    padding:0 18px;
+    cursor: default;
+}
+.list_img{
+    float:right;
+}
+
+.list_img li{
+    float:left;
+    width:36px;
+    height:36px;
+    text-align: center;
+    line-height:36px;
+    border-left:1px solid #e4e4e4;
+    cursor: pointer;
+    list-style-type:none;
+    border-right:1px solid #e4e4e4;
+    margin-right: -1px;
+}
+.list_img li i{
+    background: url(http://s1.jikexueyuan.com/course/images/preview-icon_2ae2eb9.png) no-repeat;
+    display: block;
+    height: 15px;
+    background-position: 0px 0px;
+    width: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.list_img li.list_img_2 i{
+    background: url(http://s1.jikexueyuan.com/course/images/preview-icon_2ae2eb9.png) no-repeat;
+    background-position: -15px 0px;
+}
+.lesson_list{
+    margin-right: 3px;
+    margin-top: 25px;
+}
+.lesson_img{
+    width:238px;
+    height:220px;
+    border:1px solid #e4e4e4;
+    float:left;
+    margin-right: 7px;
+    margin-left:8px;
+    margin-bottom: 20px;
+}
+.lesson_img img{
+    width:238px;
+    height:130px;
+}
+.time_icon{
+    background: url(http://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+    width:14px;
+    height:14px;
+    display:block;
+    background-size:14px 14px ;
+    float:left;
+    margin-top:25px;
+    margin-left: 10px;
+}
+.lesson_img h2{
+    font-size: 14px;
+    line-height: 18px;
+    color:#333;
+    margin-top:10px;
+    margin-left: 10px;
+}
+.lesson_img em{
+    font-style:normal;
+    margin-left:10px;
+    display:inline-block;
+    margin-top: 25px;
+    color:gray;
+}
+.page_nav{
+    float:right;
+    display:inline-block;
+}
+.lesson_foot{
+    width:1000px;
+    margin:0 auto;
+}
+.pages li{
+    display:inline-block;
+    line-height: 30px;
+    text-align: center;
+
+}
+.pages{
+    height:28px;
+}
+.pgnext{
+    width:50px;
+    border:1px solid #f0f0f0;
+    color:#d9d6c3;
+    text-align: center;
+    font-size: 12px;
+    height:30px;
+    cursor: default;
+}
+.number_1 {
+    border: 1px solid #35b558;
+    width: 30px;
+    color: white;
+    background-color: #35b558;
+}
+.number{
+    border:1px solid #e4e4e4;
+    width:30px;
+    color:#333;
+    background-color: white;
+    cursor: pointer;
+}
+.number:hover{
+    border-color: #35b558;
+}
+.thpoint{
+    width:30px;
+    background-color:#fff;
+}
+.nextpg{
+    width:50px;
+    border:1px solid #e4e4e4;
+    background-color: #fff;
+    color:#333;
+    cursor: pointer;
+}
+.nextpg:hover{
+    border-color:#35b558;
+}
+.thpoint_pg{
+    color:#000;
+    width:70px;
+    cursor: auto;
+}
+.thpointpg_now{
+    width:100px;
+}
+.thpointpg_now input{
+    border:1px solid #e4e4e4;
+    width: 20px;
+    text-align: center;
+    margin-right:10px;
+    height:22px;
+}
+.page_go{
+    border:1px solid #e4e4e4;
+    width:30px;
+    height:22px;
+    line-height:22px;
+}
+.page_go:hover{
+
+}
