@@ -42,24 +42,23 @@ $feed_list=get_list('content');
     <script src="js/jquery-2.1.4.js"></script>
     <script>
         function del_confirm(a){
-            if(confirm('确定删除吗？')){
-                var id=a;
+            if(confirm('确定要删除吗？')){
+                var id = a;
                 $.ajax({
-                    url: 'feed_del.php?id='+ a
-                    type: 'post',
-                    data: {id: a},
-                    dataType: 'json',
-                    success: function (result) {
-                        if (result.state) {
-//                            $("table tr."+a).remove();
-                            window.self.location='feed.php';
-                        } else {
+                    url : 'feed_del.php?id='+id,
+                    data : {id:id},
+                    dataType : 'json',
+                    success : function(result){
+                        if(result['state']){
+//                            $("tr."+a).remove();
+                            window.location.href="feed.php";
+                        }else{
                             alert(result.data);
                         }
                     }
                 })
-                }else{
-                return false
+            }else{
+            return false;
             }
         }
     </script>
