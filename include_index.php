@@ -2,7 +2,7 @@
 require_once "mysql.php";
 header("Content-type: text/html; charset=utf-8");
 connectDb();
-function get_list($table_name,$offset,$limit,$orderBy="order by id asc") {
+function get_list($table_name,$offset,$limit,$orderBy="order by id desc") {
     $list = array();
     $query = mysql_query("SELECT * FROM $table_name $orderBy limit  $offset,$limit");
     $count = mysql_num_rows($query);

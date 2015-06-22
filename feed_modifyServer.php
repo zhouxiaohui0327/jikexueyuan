@@ -10,10 +10,11 @@ require_once "mysql.php";
 connectDb();
 $id = $_POST['id'];
 $img_url = $_POST['img_url'];
+$small_icon = $_POST['small_icon'];
 $message = $_POST['message'];
 $classHour = $_POST['classHour'];
 $time =date("Y-m-d H:i:s");
-$sql="UPDATE content SET last_time='$time', img_url = '$img_url',message ='$message', classHour = '$classHour' WHERE id=$id";
+$sql="UPDATE content SET small_icon='$small_icon', last_time='$time', img_url = '$img_url',message ='$message', classHour = '$classHour' WHERE id=$id";
 
 if(mysql_query($sql)){
     $result=array();

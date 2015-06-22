@@ -9,7 +9,7 @@ require_once "include_index.php";
     <link rel="stylesheet" href="css/base.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <script src="js/jquery-2.1.4.js"></script>
-    <!--script src="js/index.js"></script-->
+<!--    <script src="js/index.js"></script>-->
     <style type="text/css">
         #banner {position:relative; width:570px; height:295px;  overflow:hidden;float:left;margin-left: 10px;
             border-top: 2px solid #35b558;border-bottom: 2px solid #35b558;}
@@ -143,10 +143,66 @@ require_once "include_index.php";
                                </div>
                            </div>
                        </li>
-                       <li><div class="linav"><span>web前端开发</span></div></li>
-                       <li><div class="linav"><span>智能硬件&物联网</span></div></li>
-                       <li><div class="linav"><span>操作系统&数据库</span></div></li>
-                       <li><div class="linav"><span>基础技术</span></div></li>
+                       <li>
+                           <div class="linav">
+                               <span>web前端开发</span>
+                               <div class="linav">
+                                   <div class="span_content" style="width: 241px;">
+                                       <a href="http://www.jikexueyuan.com/course/cocos2d-x/">html</a>
+                                       <a href="http://www.jikexueyuan.com/course/html5/">Jquery</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Jquery UI</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Bootstrap</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">css</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Javascript</a>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="linav">
+                               <span>智能硬件&物联网</span>
+                               <div class="linav">
+                                   <div class="span_content" style="width: 241px;">
+                                       <a href="http://www.jikexueyuan.com/course/cocos2d-x/">php</a>
+                                       <a href="http://www.jikexueyuan.com/course/html5/">JSP</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">J2EE</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Python</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Apache</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Maven</a>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="linav">
+                               <span>操作系统&数据库</span>
+                               <div class="linav">
+                                   <div class="span_content" style="width: 241px;">
+                                       <a href="http://www.jikexueyuan.com/course/cocos2d-x/">Docker</a>
+                                       <a href="http://www.jikexueyuan.com/course/html5/">Hadoop</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Storm</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Hive</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Hbase</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">OpenStack</a>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>
+                       <li>
+                           <div class="linav">
+                               <span>基础技术</span>
+                               <div class="linav">
+                                   <div class="span_content" style="width: 241px;">
+                                       <a href="http://www.jikexueyuan.com/course/cocos2d-x/">C</a>
+                                       <a href="http://www.jikexueyuan.com/course/html5/">C++/a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">C#</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Swift</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Java</a>
+                                       <a href="http://www.jikexueyuan.com/course/unity3d/">Shell</a>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>
                        <li><div class="linav"><span>图形图像设计</span></div></li>
                        <li><div class="linav"><span>认证考试</span></div></li>
                    </ul>
@@ -199,11 +255,15 @@ require_once "include_index.php";
                <div class="img_container">
                    <?php foreach($recommend_list as $one):?>
                        <div class="mid_img">
+                           <div class="shadow">
+                               <i class="player_icon" style="background: url(images/player_icon.png)0 0 no-repeat;background-size: 50px 50px"></i>
+                           </div>
                                <img src="<?php echo $one['img_url'] ;?>"/>
                                <p><?php echo $one['message'] ;?></p>
                                <p class="mid_img_content">本课程带领大家实现微博类应用，首先简单的展示了下应用的功能，进行了微博应用的实现需求分析，其次讲解如何接入新浪微博的 SDK 及其使用方法。并进行项目环境的搭建，为后面的开发做好准备工作。</p>
                                <i class="time_icon"></i>
                                <em><?php echo $one['classHour'] ;?></em>
+                               <img class="small_img" src="<?php echo $one['small_icon'];?>" style="width:15px;height: 15px" />
                        </div>
                     <?php endforeach;?>
 

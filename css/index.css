@@ -1,7 +1,7 @@
 
 .content{
     width:1000px;
-    height:300px;
+    overflow: hidden;
     margin:0 auto;
 }
 .content_nav{
@@ -40,7 +40,7 @@
     position: absolute;
     left:209px;
     top:-2px;
-    z-index:100;
+    z-index:1003;
     border: 1px solid #e4e4e4;
     border-left:0;
     overflow: hidden;
@@ -126,7 +126,6 @@
 }
 .content_mid_head{
     width:100%;
-    height:548px;
     position:relative;
 }
 .content_mid_header{
@@ -141,7 +140,7 @@
 }
 .content_mid_headnav li{
     display: inline;
-    margin:auto 52px;
+    margin:auto 53px;
 
 }
 .content_mid_headnav a{
@@ -191,10 +190,32 @@
     margin-bottom: 10px;
     display: none;
 }
-/*.mid_img:hover .mid_img_content{*/
-    /*opacity:1;*/
-    /*height:52px;*/
-    /*display: block;*/
+.shadow{
+    background:rgba(0,0,0,.4);
+    position:absolute;
+    width: 100%;
+    height:61%;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s,-webkit-transform 0.5s;
+    transition: opacity 0.5s,transform 0.5s;
+}
+.shadow:hover{
+    opacity:1;
+}
+.player_icon{
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+}
+/*.mid_img:hover .shadow{*/
+    /*display:block;*/
 /*}*/
 .mid_img em{
     font-style: normal;
@@ -203,6 +224,12 @@
     position: absolute;
    bottom: 10px;
     color:gray;
+}
+.small_img{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
 }
 
 .time_icon{

@@ -46,6 +46,7 @@ $feed_list=get_list('content');
                 var id = a;
                 $.ajax({
                     url : 'feed_del.php?id='+id,
+                    type: 'post',
                     data : {id:id},
                     dataType : 'json',
                     success : function(result){
@@ -77,6 +78,7 @@ $feed_list=get_list('content');
                     var feed = $.parseJSON(result);
                     $('#modifyContent input[name=id]').val(feed.id);
                     $('#modifyContent input[name=img_url]').val(feed.img_url);
+                    $('#modifyContent input[name=small_icon]').val(feed.small_icon);
                     $('#modifyContent input[name=message]').val(feed.message);
                     $('#modifyContent input[name=classHour]').val(feed.classHour);
                     $('#modifyContent').css("display","block");
@@ -121,6 +123,7 @@ $feed_list=get_list('content');
     <th>id</th>
     <th>最后修改时间</th>
     <th>img_url</th>
+    <th>small_icon</th>
     <th>message</th>
     <th>classHour</th>
     <th>操作</th>
@@ -130,6 +133,7 @@ $feed_list=get_list('content');
         <td><?php echo $row['id'];?></td>
         <td><input type="text" class="date" name="time" value="<?php echo $row['last_time'];?>"/></td>
         <td><?php echo $row['img_url'];?></td>
+        <td><?php echo $row['small_icon'];?></td>
         <td><?php echo $row['message'];?></td>
         <td><?php echo $row['classHour'];?></td>
         <td><a class='btn btn-danger btn-sm'  href="javascript:del_confirm(<?php echo $row['id'];?>)">删除</a>
@@ -148,6 +152,11 @@ $feed_list=get_list('content');
                 <div class="form-group">
                     <label for="exampleInputName2">img_url:</label>
                     <input class="form-control" type="text" name ="img_url" value=""/>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="exampleInputName2">small_icon:</label>
+                    <input class="form-control" type="text" name ="small_icon" value=""/>
                 </div>
                 <br/>
                 <div class="form-group">
@@ -170,20 +179,22 @@ $feed_list=get_list('content');
                $("#modifyBtn").click(function(){
                    var id = $('input[name=id]').val();
                    var img_url = $('input[name=img_url]').val();
+                   var small_icon = $('input[name=small_icon]').val();
                    var message = $('input[name=message]').val();
                    var classHour = $('input[name=classHour]').val();
                    $.ajax({
                        url : 'http://127.0.0.1/jikexueyuan/feed_modifyServer.php',
                        type : 'post',
-                       data : {id:id,img_url:img_url,message:message,classHour:classHour},
+                       data : {id:id,img_url:img_url,small_icon:small_icon,message:message,classHour:classHour},
                        dataType : 'json',
                        success : function(result){
                            if(result.state){
                                $("#modifyContent").hide();
 //                               window.location.href="feed.php";
                                $("tr."+id).find("td").eq(2).html(img_url);
-                               $("tr."+id).find("td").eq(3).html(message);
-                               $("tr."+id).find("td").eq(4).html(classHour);
+                               $("tr."+id).find("td").eq(3).html(small_icon);
+                               $("tr."+id).find("td").eq(4).html(message);
+                               $("tr."+id).find("td").eq(5).html(classHour);
                                $("tr."+id).find("input").val(getTime());
                            }else{
                                alert(result.data);
@@ -264,6 +275,11 @@ $feed_list=get_list('content');
         <div class="form-group">
             <label for="exampleInputName2">img_url</label>
             <input class="form-control" type="text" name="img_url">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputName2">small_icon</label>
+            <input class="form-control" type="text" name="small_icon">
         </div>
 
         <div class="form-group">
