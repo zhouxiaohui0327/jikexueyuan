@@ -259,13 +259,18 @@ require_once "include_index.php";
                                <i class="player_icon" style="background: url(images/player_icon.png)0 0 no-repeat;background-size: 50px 50px"></i>
                            </div>
                                <img src="<?php echo $one['img_url'] ;?>"/>
-                               <p><?php echo $one['message'] ;?></p>
-                               <p class="mid_img_content">本课程带领大家实现微博类应用，首先简单的展示了下应用的功能，进行了微博应用的实现需求分析，其次讲解如何接入新浪微博的 SDK 及其使用方法。并进行项目环境的搭建，为后面的开发做好准备工作。</p>
-                               <i class="time_icon"></i>
-                               <em><?php echo $one['classHour'] ;?></em>
-                               <img class="small_img" src="<?php echo $one['small_icon'];?>" style="width:15px;height: 15px" />
+                           <div class="mid_mid_box">
+                               <div class="img_container_bottom">
+                                   <p><?php echo $one['message'] ;?></p>
+                                   <p class="mid_img_content">本课程带领大家实现微博类应用，首先简单的展示了下应用的功能，进行了微博应用的实现需求分析，其次讲解如何接入新浪微博的 SDK 及其使用方法。并进行项目环境的搭建，为后面的开发做好准备工作。</p>
+                                   <i class="time_icon"></i>
+                                   <em><?php echo $one['classHour'] ;?></em>
+                                   <img class="small_img" src="<?php echo $one['small_icon'];?>" style="width:15px;height: 15px" />
+                               </div>
+                           </div>
                        </div>
                     <?php endforeach;?>
+
 
                </div>
                <div  class="bottom_content">
