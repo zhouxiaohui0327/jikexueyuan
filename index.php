@@ -251,6 +251,7 @@ require_once "include_index.php";
               </div>
 
 
+               <div class="mid_content"></div>
                <div class="img_container">
                    <?php foreach($recommend_list as $one):?>
                        <div class="mid_img">
@@ -303,25 +304,9 @@ require_once "include_index.php";
                    </div>
                    <div class="content_foot">
                         <?php foreach($knowledge_list as $row):?>
-                       <div class="foot_img">
-                           <div class="foot_img_front">
-                               <img src="<?php echo $row['img_url'];?>"/>
-                               <h2><?php echo $row['message'];?></h2>
-                               <p><?php echo $row['classHour'];?></p>
-                           </div>
-
-                            <div class="foot_img_back" style="position:absolute;text-align: center">
-                               <p style="font-style:normal;margin-top:50px;"> 3233人已学习</p>
-                                <botton style="  background-color: #35b558;
-  width: 100px;
-  height: 30px;
-  display: inline-block;
-  line-height: 30px;
-  font-size: 15px;
-  color: white;
-  margin-top: 30px;
-  border:none">立即学习</botton>
-                            </div>
+                       <div class="foot_img"><img src="<?php echo $row['img_url'];?>"/>
+                           <h2><?php echo $row['message'];?></h2>
+                           <p><?php echo $row['classHour'];?></p>
                        </div>
                        <?php endforeach;?>
 
