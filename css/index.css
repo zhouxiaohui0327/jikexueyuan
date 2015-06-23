@@ -140,23 +140,24 @@
 }
 .content_mid_headnav li{
     display: inline;
-    margin:auto 53px;
+    float: left;
+    z-index: 1020;
+    border-bottom: 2px solid #e8e8e8;
+    padding: 10px 55px;
+    padding-top: 0;
 
 }
 .content_mid_headnav a{
     text-decoration:none;
     color:#333;
 }
-.content_mid_headnav a:hover{
+.content_mid_headnav li:hover a{
     color: #35b558;
 }
-.mid_content{
-    width:1000px;
-    height:500px;
-    border-top:2px solid #E8E8E8;
-    position: absolute;
-    margin-left: 175px;
+.content_mid_headnav li:hover{
+border-bottom-color: #35b558;
 }
+
 .img_container{
     width:1100px;
     height:480px;
@@ -220,9 +221,6 @@
     margin-top: -25px;
     cursor: pointer;
 }
-/*.mid_img:hover .shadow{*/
-    /*display:block;*/
-/*}*/
 .img_container_bottom em{
     font-style: normal;
     margin-left: 25px;
@@ -324,7 +322,7 @@
     margin:0 auto;
 }
 .imger1{
-    width:198px;
+    width:199px;
     height:340px;
     float:left;
     border:1px solid #e8e8e8;
@@ -335,6 +333,10 @@
 .imger1:hover{
     border:1px solid #35b558;
     position: relative;
+}
+.imger1:hover button{
+    background-color: #35b558;
+    color: #ffffff;
 }
 .imger1 img{
     margin-top:30px;
@@ -353,10 +355,6 @@
     color : #35b558;
     background-color: white;
 }
-.button:hover{
-    color:white;
-    background-color: #35b558;
-}
 .button1{
     margin-top: 45px;
     border:1px solid #E8E8E8;
@@ -373,14 +371,45 @@
     text-align: center;
 }
 .foot_img{
-    width: 199px;
+    width: 201px;
     height: 200px;
     border:1px solid #E8E8E8;
     float:left;
     margin-right: -1px;
     margin-bottom: -1px;
     cursor: pointer;
-
+    box-sizing: border-box;
+    position:relative;
+}
+.foot_img_front{
+    width: 199px;
+    height: 200px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.foot_img_back{
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    height: 200px;
+    width: 201px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    top:0;
+}
+.foot_img:hover .foot_img_front{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.foot_img:hover .foot_img_back{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 .foot_img img{
     width: 70px;
