@@ -35,7 +35,7 @@ require_once "include_index.php";
 
             $("#banner li").click(function() {
                 var i = $(this).text() -1;//获取Li元素内的值，即1，2，3，4
-                n = i;
+                 n = i;
                 if (i >= count) return;
                 $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
                 document.getElementById("banner").style.background="";
